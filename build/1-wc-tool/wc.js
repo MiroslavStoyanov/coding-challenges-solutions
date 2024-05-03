@@ -82,7 +82,7 @@ function myWC(argv, stream) {
                     if (argv.length === 5) {
                         option = argv[3];
                         fileName = argv[4];
-                        srcDir = path.resolve(__dirname, '..', 'src');
+                        srcDir = path.resolve(__dirname, '..', 'src/1-wc-tool');
                         filePath = path.join(srcDir, fileName);
                         if (fs_1.default.existsSync(filePath)) {
                             switch (option) {
@@ -151,10 +151,10 @@ function charCount(filePath) {
     return chars;
 }
 function readStream(stream) {
+    var _a, stream_1, stream_1_1;
+    var _b, e_1, _c, _d;
     return __awaiter(this, void 0, void 0, function () {
         var data, chunk, e_1_1;
-        var _a, stream_1, stream_1_1;
-        var _b, e_1, _c, _d;
         return __generator(this, function (_e) {
             switch (_e.label) {
                 case 0:

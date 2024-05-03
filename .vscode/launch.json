@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Coding Challenge 3",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/build/3-compression-tool/index.js",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "args": ["test.txt"],
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "sourceMaps": true
+        }
+    ]
+}

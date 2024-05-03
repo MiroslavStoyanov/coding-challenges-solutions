@@ -9,7 +9,7 @@ async function myWC(
     if (argv.length === 5) {
         const option = argv[3];
         const fileName = argv[4];
-        const srcDir = path.resolve(__dirname, '..', 'src');
+        const srcDir = path.resolve(__dirname, '..', 'src/1-wc-tool');
         const filePath = path.join(srcDir, fileName);
 
         if (fs.existsSync(filePath)) {
