@@ -15,7 +15,7 @@ export default class HuffmanTree {
 
     /**
      * Create a frequency table of characters for the given text.
-     * 
+     *
      * @public
      * @param {string} text - The text to create the frequency table for.
      * @returns {Map<string, number>}
@@ -37,7 +37,7 @@ export default class HuffmanTree {
 
     /**
      * Create a Huffman tree from the given frequency table.
-     * 
+     *
      * @param {Map<string, number>} table - The frequency table to create the Huffman tree from.
      * @returns {IHuffmanNode | undefined}
      */
@@ -61,7 +61,7 @@ export default class HuffmanTree {
 
     /**
      * Encode the given text using the Huffman tree.
-     * 
+     *
      * @param {string} text - The text to encode.
      * @returns {string}
      */
@@ -84,7 +84,7 @@ export default class HuffmanTree {
 
     /**
      * Decode the given text using the Huffman tree.
-     * 
+     *
      * @param {string} text - The text to decode.
      * @returns {string}
      */
@@ -101,7 +101,7 @@ export default class HuffmanTree {
                 decoded += node.value;
                 node = this.huffmanTree;
             }
-            node = bit === '0' ? node.left : node.right;
+            node = bit === '0' ? (node.left as IHuffmanNode) : (node.right as IHuffmanNode);
         }
 
         if (node.isLeaf()) {

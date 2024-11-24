@@ -18,6 +18,21 @@
             "args": ["test.txt"],
             "preLaunchTask": "tsc: build - tsconfig.json",
             "sourceMaps": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Coding Challenge 4",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/build/4-cut-tool/index.js",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "args": ["cut", "-f2", "-d,", "fourchords.csv"],
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "sourceMaps": true
         }
     ]
 }
